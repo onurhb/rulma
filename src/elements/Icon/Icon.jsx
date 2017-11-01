@@ -4,6 +4,15 @@ import classNames from 'classnames';
 
 import { sizePropType } from '../../modifiers';
 
+
+// Map size to fa-<size> e.g. fa-large to fa-2x
+function getFaSize(size) {
+  if (size === null) return 'lg';
+  if (size === 'medium') return '2x';
+  if (size === 'large') return '3x';
+  return null;
+}
+
 const Icon = ({
   'aria-hidden': ariaHidden,
   'aria-label': ariaLabel,
@@ -16,9 +25,12 @@ const Icon = ({
   size,
   ...rest
 }) => {
+  const faSize = getFaSize(size);
+
   const iconClasses = classNames(`fa fa-${icon}`, {
     'fa-fw': fw,
     'fa-spin': spin,
+    [`fa-${getFaSize(size)}`]: faSize,
   });
 
   const containerClasses = classNames('icon', className, {

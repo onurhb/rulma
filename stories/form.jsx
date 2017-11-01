@@ -206,7 +206,7 @@ storiesOf('Form', module)
         <Input iconRight="check" iconSize="medium" placeholder="Email" type="email" size="medium" />
       </Field>
       <Field>
-        <Input iconRight="check" iconSize="large" placeholder="Email" type="email" size="large" />
+        <Input iconRight="check" iconSize="medium" placeholder="Email" type="email" size="large" />
       </Field>
     </div>,
   )

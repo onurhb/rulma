@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 const NavRight = ({ active, className, menu, ...props }) =>
   (<div
-    className={classNames('nav-right', className, { 'is-active': active, 'nav-menu': menu })}
+    className={classNames('navbar-end', className, { 'is-active': active, 'navbar-menu': menu })}
     {...props}
   />);
 

@@ -3,11 +3,13 @@ import PropTypes from 'prop-types';
 
 import classNames, { modifierPropTypes } from '../../modifiers';
 
-const NavItem = ({ as, active, brand, tab, ...props }) => {
-  const [classes, restProps] = classNames(props, 'nav-item', {
+const NavItem = ({ as, active, brand, tab, dropdown, hoverable, ...props }) => {
+  const [classes, restProps] = classNames(props, 'navbar-item', {
     'is-active': active,
     'is-brand': brand,
     'is-tab': tab,
+    'is-hoverable': hoverable,
+    'has-dropdown': dropdown,
   });
 
   const ElementType = as || (props.href ? 'a' : 'div');
@@ -22,6 +24,8 @@ NavItem.propTypes = {
   href: PropTypes.string,
   ...modifierPropTypes,
   tab: PropTypes.bool,
+  dropdown: PropTypes.bool,
+  hoverable: PropTypes.bool,
 };
 
 NavItem.defaultProps = {
@@ -30,6 +34,8 @@ NavItem.defaultProps = {
   brand: false,
   href: null,
   tab: false,
+  dropdown: false,
+  hoverable: false,
 };
 
 export default NavItem;

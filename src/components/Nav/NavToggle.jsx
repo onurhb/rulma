@@ -7,7 +7,7 @@ import classNames from 'classnames';
 * Only visibile on mobile.
 */
 const NavToggle = ({ active, className, ...props }) =>
-  (<span className={classNames('nav-toggle', className, { 'is-active': active })} {...props}>
+  (<span className={classNames('navbar-toggle', className, { 'is-active': active })} {...props}>
     <span />
     <span />
     <span />

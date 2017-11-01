@@ -3,13 +3,12 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 import NavLeft from './NavLeft';
-import NavCenter from './NavCenter';
 import NavRight from './NavRight';
 import NavItem from './NavItem';
 import NavToggle from './NavToggle';
 
 const Nav = ({ className, shadow, ...props }) => {
-  const classes = classNames('nav', className, {
+  const classes = classNames('navbar', className, {
     'has-shadow': shadow,
   });
 
@@ -28,7 +27,6 @@ Nav.defaultProps = {
 
 // Add the sub components to the top level export for ease of use
 Nav.Left = NavLeft;
-Nav.Center = NavCenter;
 Nav.Right = NavRight;
 Nav.Item = NavItem;
 Nav.Toggle = NavToggle;
