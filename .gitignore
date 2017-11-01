@@ -8,6 +8,7 @@ node_modules
 # build folder
 lib
 es
+rulma
 
 # other
 .DS_STORE
