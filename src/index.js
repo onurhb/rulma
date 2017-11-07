@@ -44,8 +44,10 @@ import Title from './elements/Title';
 import Section from './layout/Section';
 import Select from './elements/Form/Select';
 import Subtitle from './elements/Subtitle';
+import Dropdown from './components/Dropdown';
 
 export {
+  Dropdown,
   Addons,
   Block,
   Box,

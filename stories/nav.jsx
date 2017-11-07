@@ -95,28 +95,15 @@ storiesOf('Nav', module)
             </Nav.Item>
             <Nav.Item hiddenMobile tab active href="#">
               Home
-              </Nav.Item>
-            <Nav.Item hiddenMobile dropdown hoverable>
-              <a className="navbar-link">
-                Docs
-              </a>
-
-              <div className="navbar-dropdown">
-                <a className="navbar-item">
-                  Overview
-                    </a>
-                <a className="navbar-item">
-                  Elements
-                    </a>
-                <a className="navbar-item">
-                  Components
-                    </a>
-                <hr className="navbar-divider" />
-                <div className="navbar-item">
-                  Version 0.6.0
-                  </div>
-              </div>
             </Nav.Item>
+            <Nav.Dropdown hoverable title="Docs">
+              <Nav.Item href="#">
+                  Overview
+              </Nav.Item>
+              <Nav.Item href="#">
+                  Assets
+              </Nav.Item>
+            </Nav.Dropdown>
           </Nav.Left>
           <Nav.Toggle onClick={toggle} active={value} />
         </Nav>}
